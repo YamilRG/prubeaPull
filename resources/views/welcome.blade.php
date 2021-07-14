@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravelo2
+                    elpaco
                 </div>
 
                 <div class="links">
