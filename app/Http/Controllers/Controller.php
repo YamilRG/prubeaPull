@@ -12,7 +12,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
  	public function mostrar(){
-        return json_encode(DB::select('select * from warros;'));
+        return json_encode(DB::select('select * from warro;'));
         }
 
 	public function prueba(){
