@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/mostrar', [\App\Http\Controllers\Controller::class, 'mostrar']);
 
+Route::post('/registro', function(Request $request){
+	$warro = new warros();
+	$warro->nombre = $request->nombre;
+	$warro->apellido = $request->apellido;
+	$warro->Servidor = $_SERVER['SERVER_ADDR'];
+	$warro->save();
+
+	return warros::all();
+
+});
 
 
 Route::get('/', function(){
