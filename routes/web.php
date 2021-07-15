@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\warro;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,13 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/mostrara', [\App\Http\Controllers\Controller::class, 'mostrar']);
 
 Route::post('/registro', function(Request $request){
-	$warro = new warros();
+	$warro = new warro();
 	$warro->nombre = $request->nombre;
-	$warro->apellido = $request->apellido;
-	$warro->Servidor = $_SERVER['SERVER_ADDR'];
+	$warro->servidor = $_SERVER['SERVER_ADDR'];
 	$warro->save();
 
-	return warros::all();
+	return warro::all();
 
 });
 
